@@ -1,4 +1,4 @@
-#! /usr/bin/env/ python
+#!/usr/bin/env python
 
 import sys
 
@@ -9,20 +9,24 @@ def remove_zero(digits):
             answer.append(digit)
     return answer
 
-sum = 0
-number = sys.stdin.readline() # Reads the input, i.e. T
-number = number.rstrip() # Strips number of /n
+tests = int(sys.stdin.readline())
 
-number = int(number)
+for test in range(tests):
 
-digits = list(map(int, str(number)))
+    sum = 0
 
-new_digits = remove_zero(digits)
+    number = sys.stdin.readline() 
+    number = number.rstrip()
+    number = int(number)
 
-for digit in new_digits:
-	if number % digit == 0:
-            sum += 1
+    digits = list(map(int, str(number)))
+
+    new_digits = remove_zero(digits) # Prevent ZeroDivisionError
+
+    for digit in new_digits:
+        if number % digit == 0:
+                sum += 1
         else:
             continue
 
-print sum
+    print sum
