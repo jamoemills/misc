@@ -21,7 +21,7 @@ for test in range(tests):
 
     digits = list(map(int, str(number)))
 
-    new_digits = remove_zero(digits) # Prevent ZeroDivisionError
+    new_digits = remove_zero(digits)
 
     for digit in new_digits:
         if number % digit == 0:
