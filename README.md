@@ -1,1 +1,1 @@
-# A place for miscellenaous files for various project that I share with friends
+# Files that I'm sharing with friends
