@@ -19,9 +19,11 @@ tests = sys.stdin.readline()
 
 for test in tests:
 
+
 	fibo_seq = [0, 1] # First elements in sequence
-	
-	number = int(test)
+
+	number = sys.stdin.readline()
+	number = int(number)
 
 	n = 2
 
@@ -33,3 +35,5 @@ for test in tests:
 		print 'isFibo'
 	else: 
 		print 'isNotFibo'
+
+
