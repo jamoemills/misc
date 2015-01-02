@@ -1,14 +1,23 @@
 #!\usr\bin\python
+# -*- coding: utf-8 -*-
 
-# Use the max() to find the maximum from the XOR comparisons
+import sys
 
-# XOR is either, but not both
-# (A or B) and not(A and B)
+def  maxXor( l,  r):
+	Xor_values = []
+	x = r - l
+	while x != 0:
+		for i in range(l + x, r + 1): # O(n**2)
+		  	Xor = (l + x) ^ i
+		  	Xor_values.append(Xor)
+	  	x -= 1
+	return max(Xor_values)
 
-# L and R provide the range
+_l = sys.stdin.readline()
+_r = sys.stdin.readline()
 
-L = int(raw_input('Enter L: '))
-R = int(raw_input('Enter R: '))
+_l = int(_l)
+_r = int(_r)
 
-range(L, R + 1)
-
+res = maxXor(_l, _r);
+print(res)
